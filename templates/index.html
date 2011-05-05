@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Secure password generator</title>
+</head>
+
+<body>
+<p>Your generated password is selected below. Please keep a copy
+because once this page is closed there is no way to recover the password.</p>
+<h1 id="passwd_text">{{ passwd }}</h1>
+
+<p>Documentation and source is provided at <a
+href="https://github.com/jjh42/password-gen">github</a>.
+
+<p>Use of the service is at your own risk with no fitness or warranty
+for a particular purpose.</p>
+
+<!-- hhmts start -->Last modified: Thu May  5 13:09:36 EST 2011 <!-- -->
+<!--hhmts end -->
+<script type="text/javascript">
+var autoSelect = function (el) {
+  if (/textarea/i.test(el.tagName) || (/input/i.test(el.tagName) && /text/i.test(el.type))) {
+    el.select();
+  } else if (!!window.getSelection) { // FF, Safari, Chrome, Opera
+    var sel = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    sel.removeAllRanges();
+    sel.addRange(range);
+  } else if (!!document.selection) { // IE
+    document.selection.empty();
+    var range = document.body.createTextRange();
+    range.moveToElementText(el);
+    range.select();
+  }
+};
+
+autoSelect(document.getElementById('passwd_text'));
+</script>
+</body> </html>

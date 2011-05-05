@@ -1,0 +1,7 @@
+This is a very basic password generator I made, hosted on app-engine. It is only a few lines of source and has no options. The password is only ever supplied over an HTTPS connection. The generated passwords are not logged (although IP addresses of users are retained as part of the Google logging system.
+
+Use service at your own risk.
+
+It is accessible at http://password.42quarks.com
+
+Source is license under the GNU GPLv2.
